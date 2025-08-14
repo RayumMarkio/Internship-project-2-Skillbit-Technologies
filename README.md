@@ -1,43 +1,66 @@
-# Project Title
-Simple Calculator by python
+# Python Calculator
 
-# Getting started
+It is a basic python calculator which can perform basic arithmetic operations like addition, subtraction, multiplication. Python 3.8 is used for the implementation.
 
-<ul> 
-<li> This Program run on both Windows and Linux operating system by using pycharm, anaconda 3 or all other python editor with the python version 3.13.6  </li>
-<li> This software is developed by python 3.13.6 </li>
-<li> Used tkinter module for the Graphical User Interface </li>
-<li> It performs  Addition, Subtraction, Multiplication and Division only for two numbers </li>
-<li> It is more secure which means you may not enter other anything except the numerical values </li>
-<li> It is more relevant and easy to use for an user </li>
-</ul>
+## Approach
 
-# Prerequisites
-<ul>
-<li>You need to install python version 3.13.6. you may download Python version from their official website: ../ https://www.python.org/downloads/ <br/>
-or you may download a complete package by downloading anaconda: ../ https://www.anaconda.com/download/ <br/>
-</li>
-<li> One editor can be a good one. (i.e., pycharm, anaconda3 etc or any other that you can choice). Download pycharm:  ../ https://www.jetbrains.com/pycharm/download/#section=windows </li>
-</ul>
+* User enter number (single digit or n character) to perform a specific operation like 1, 2, 3, 4 and n (n is to cancel calculation operation) are valid.
+* Taking two numbers as inputs and used branching if elif else to perform a particular section.
+* Using functions add(), subtract(), multiply() to perform specific task after given data to the system.
 
-For Linux
+## Code
 
-<ul> 
-<li> To install both python and any text editor like pycharm you should do some execution of command line on the terminal.  </li>
+# Program make a basic calculator
+# Author @inforkgodara
 
-</ul>
+# Function adds two numbers
+def add(first_number, second_number):
+    return first_number + second_number
 
-# Built in
-<ul> <li> python 3.13.6  <br/></li> <li> tkinter python <br/> </li> </ul>
 
-# Contribution
-Only Belongs to the <b>Author </b>
+# Function subtracts two numbers
+def subtract(first_number, second_number):
+    return first_number - second_number
 
-# Author
-Rayum Markio <br/>
-Department of Computer Science and Engineering <br/>
-Assam Downtown University <br/>
-Khankar Gaon, Assam <br/>
 
-# Acknowledgement
-<ul> <li> Stackoverflow  <br/> </li> <li> Related blogs <br/> </li> <li> etc </li> </ul>
+# Function multiplies two numbers
+def multiply(first_number, second_number):
+    return first_number * second_number
+
+
+# Function divides two numbers
+def divide(first_number, second_number):
+    return first_number / second_number
+
+
+print('Select options.')
+print('1. Add')
+print('2. Subtract')
+print('3. Multiply')
+print('4. Divide')
+
+while True:
+    # Take input from the console
+    choice = input('Enter choice(1/2/3/4 or n to cancel): ')
+    # Check if choice is one of the five options
+    if choice in ('1', '2', '3', '4'):
+        first_number = float(input('Enter first number: '))
+        second_number = float(input('Enter second number: '))
+
+        if choice == '1':
+            print(first_number, '+', second_number, '=', add(first_number, second_number))
+
+        elif choice == '2':
+            print(first_number, '-', second_number, '=', subtract(first_number, second_number))
+
+        elif choice == '3':
+            print(first_number, '*', second_number, '=', multiply(first_number, second_number))
+
+        elif choice == '4':
+            print(first_number, '/', second_number, '=', divide(first_number, second_number))
+    elif choice == 'n':
+        print('Your are successfully logged out!')
+        break
+    else:
+        print('Please enter correct input among these 1/2/3/4/n')
+
