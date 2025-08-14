@@ -11,7 +11,7 @@ It is a basic python calculator which can perform basic arithmetic operations li
 ## Code
 
 # Program make a basic calculator
-# Author @inforkgodara
+# Author Rayum Markio
 
 # Function adds two numbers
 def add(first_number, second_number):
